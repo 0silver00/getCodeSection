@@ -1,2 +1,3 @@
 # getCodeSection
-get Section Header and print .text
+Get section header and print .text
+Calculated with MD5
