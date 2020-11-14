@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 	PIMAGE_SECTION_HEADER pSH = NULL;
 	HANDLE hProcessSnap;
 
-	int pid = 19344;
+	int pid = atoi(argv[1]);
 
 	char filePath[256] = { 0, };
 	char fileName[256] = { 0, };
@@ -42,8 +42,6 @@ int main(int argc, char** argv) {
 	}
 
 	void* lpBaseAddress = (void*)GetModuleAddress(fileName, pid);
-	//printf("%p\n\n", lpBaseAddress);
-
 
 
 	/// <summary>
@@ -65,7 +63,7 @@ int main(int argc, char** argv) {
 			return false;
 		}
 		else
-			printf("OK IMAGE_DOS_HEADER\n");
+			//printf("OK IMAGE_DOS_HEADER\n");
 
 		pNTH = (PIMAGE_NT_HEADERS)((PBYTE)pDH + pDH->e_lfanew);
 		if (pNTH->Signature != IMAGE_NT_SIGNATURE) {
@@ -74,19 +72,19 @@ int main(int argc, char** argv) {
 			return false;
 		}
 		else
-			printf("OK IMAGE_NT_HEADER\n");
+			//printf("OK IMAGE_NT_HEADER\n");
 
 		pFH = &pNTH->FileHeader;
 		pSH = IMAGE_FIRST_SECTION(pNTH);
 
 		for (int i = 0; i < pFH->NumberOfSections; i++) {
 			if (!strcmp((char*)pSH->Name, ".text")) {
-				cout << "Section name:" << pSH->Name << endl;
+				/*cout << "Section name:" << pSH->Name << endl;
 				cout << "             Virtual Size:" << pSH->Misc.VirtualSize << endl;
 				cout << "             Virtual address:" << pSH->VirtualAddress << endl;
 				cout << "             SizeofRawData:" << pSH->SizeOfRawData << endl;
 				cout << "             PointertoRelocations:" << pSH->PointerToRelocations << endl;
-				cout << "             Characteristics:" << pSH->Characteristics << endl;
+				cout << "             Characteristics:" << pSH->Characteristics << endl;*/
 
 				textAddr = (BYTE*)lpBaseAddress + pSH->VirtualAddress;
 				textSize = pSH->Misc.VirtualSize;
@@ -145,7 +143,7 @@ int main(int argc, char** argv) {
 		return false;
 	}
 	else
-		printf("OK IMAGE_DOS_HEADER\n");
+		//printf("OK IMAGE_DOS_HEADER\n");
 
 	pNTH = (PIMAGE_NT_HEADERS)((PBYTE)pDH + pDH->e_lfanew);
 	if (pNTH->Signature != IMAGE_NT_SIGNATURE) {
@@ -156,19 +154,19 @@ int main(int argc, char** argv) {
 		return false;
 	}
 	else
-		printf("OK IMAGE_NT_HEADER\n");
+		//printf("OK IMAGE_NT_HEADER\n");
 
 	pFH = &pNTH->FileHeader;
 	pSH = IMAGE_FIRST_SECTION(pNTH);
 
 	for (int i = 0; i < pFH->NumberOfSections; i++) {
 		if (!strcmp((char*)pSH->Name, ".text")) {
-			cout << "Section name:" << pSH->Name << endl;
+			/*cout << "Section name:" << pSH->Name << endl;
 			cout << "             Virtual Size:" << pSH->Misc.VirtualSize << endl;
 			cout << "             Virtual address:" << pSH->VirtualAddress << endl;
 			cout << "             SizeofRawData:" << pSH->SizeOfRawData << endl;
 			cout << "             PointertoRelocations:" << pSH->PointerToRelocations << endl;
-			cout << "             Characteristics:" << pSH->Characteristics << endl;
+			cout << "             Characteristics:" << pSH->Characteristics << endl;*/
 
 			ftextAddr = buffer + 0x400;
 			ftextSize = pSH->Misc.VirtualSize;
@@ -193,12 +191,18 @@ int main(int argc, char** argv) {
 
 	for(int i=0; i< HashNum; i++){
 		if (ReadProcessMemory(hp, textAddr, &textSection, sizeof(textSection), NULL)) {
-			
+
 			memcpy(temp, &ftextAddr[i*512], 512);
 			
 			if (calcMD5(textSection, md5) && calcMD5(temp, fmd5)) {
 				printf("%s  %s\n", md5, fmd5);           /////////////////////////////////
-				//md5List[i] = (char*)md5;
+				if (strcmp(md5,fmd5)) {
+					printf("%d : Code Section is changed (0x%p)\n", pid, textAddr+(i * 512));
+					fclose(pFile);
+					free(buffer);
+					CloseHandle(hp);
+					return 0;
+				}
 			}
 			else
 				printf("MD5 calculation failed.\n"); 
@@ -273,7 +277,6 @@ BOOL calcMD5(byte* data, LPSTR md5)
 		return FALSE;
 	}
 }
-
 
 
 DWORD64 GetModuleAddress(const char* moduleName, int pid)
