@@ -2,12 +2,9 @@
 #include <iostream>
 #include <Windows.h>
 #include <wincrypt.h>
-#include <string.h>
 #include <Psapi.h>
 #include <tlhelp32.h>
 
-#define BYTES_TO_HASH 512
-#define MAX_PROCESS_NAME 512
 #define ESUCCESS	0
 #define ENOPROC		1
 #define ENONAME		2
@@ -17,8 +14,52 @@ using namespace std;
 BOOL calcMD5(byte* data, LPSTR md5);
 DWORD64 GetModuleAddress(const char* moduleName, int pid);
 
-
 int main(int argc, char** argv) {
+	int pid = atoi(argv[1]);
+	char filePath[MAX_PATH] = { 0, };
+	char fileName[MAX_PATH] = { 0, };
+	DWORD cbNeeded;
+
+	HMODULE hMods[1024];
+	HANDLE hp = OpenProcess(PROCESS_ALL_ACCESS, 0, pid);
+	if (!hp) {
+		printf("FAILED OPENPROCESS\r\n");
+		return FALSE;
+	}
+
+	// Get a list of all the modules in this process. 
+	if (EnumProcessModules(hp, hMods, sizeof(hMods), &cbNeeded))
+	{
+		for (unsigned int i = 0; i < (cbNeeded / sizeof(HMODULE)); i++)
+		{
+			//TCHAR szModName[MAX_PATH];
+
+			// Get the full path to the module's file. 
+			if (GetModuleFileNameEx(hp, hMods[i], filePath, sizeof(filePath) / sizeof(TCHAR)))
+			{
+				// Print the module name and handle value. 
+				//_tprintf(TEXT("\t%s (0x%08X)\n"), szModName, hMods[i]);
+				GetFileTitle(filePath, fileName, sizeof(fileName));
+				std::string str(fileName);
+				printf("checking file : %s\r\n", str);
+				CompareCode(pid, hp, filePath, fileName);
+				/*if (!CompareCode(pid, caller_pid, hp, filePath, fileName)) {
+					form->logging("FAILED COMPARECODE FUNCTION\r\n");
+					CloseHandle(hp);
+					return false;
+				}*/
+			}
+		}
+	}
+
+	CloseHandle(hp);
+	return 0;
+}
+
+
+
+
+BOOLEAN CompareCode(int pid, HANDLE hp, char filePath[], char fileName[]) {
 
 	PIMAGE_DOS_HEADER pDH = NULL;
 	PIMAGE_NT_HEADERS pNTH = NULL;
@@ -26,23 +67,12 @@ int main(int argc, char** argv) {
 	PIMAGE_SECTION_HEADER pSH = NULL;
 	HANDLE hProcessSnap;
 
-	int pid = atoi(argv[1]);
-
-	char filePath[256] = { 0, };
-	char fileName[256] = { 0, };
-
-	HANDLE hp = OpenProcess(PROCESS_ALL_ACCESS, 0, pid);
-	if (!hp) {
-		printf("FAILED OPENPROCESS\n");
-		return false;
-	}
-	else {
-		GetModuleFileNameEx(hp, NULL, filePath, 256);
-		GetFileTitle(filePath, fileName, 256);
-	}
 
 	void* lpBaseAddress = (void*)GetModuleAddress(fileName, pid);
-
+	if (!lpBaseAddress) {
+		printf("FAILED GETMODULEADDRESS\r\n");
+		return FALSE;
+	}
 
 	/// <summary>
 	/// Process PE (Memory)
@@ -53,6 +83,7 @@ int main(int argc, char** argv) {
 
 	BYTE buf[700] = { 0, };
 	BYTE* textAddr = NULL;
+	BYTE* textAddr2 = NULL;
 	int textSize;
 
 	if (ReadProcessMemory(hp, lpBaseAddress, &buf, sizeof(buf), NULL)) {
@@ -87,6 +118,7 @@ int main(int argc, char** argv) {
 				cout << "             Characteristics:" << pSH->Characteristics << endl;*/
 
 				textAddr = (BYTE*)lpBaseAddress + pSH->VirtualAddress;
+				textAddr2 = (BYTE*)lpBaseAddress + pSH->VirtualAddress;
 				textSize = pSH->Misc.VirtualSize;
 				break;
 			}
@@ -184,10 +216,13 @@ int main(int argc, char** argv) {
 	/// <param name="argv"></param>
 	/// <returns></returns>
 	BYTE textSection[512] = { 0, };
-	int HashNum = (((textSize / 512) + 1) > ((ftextSize / 512) + 1)) ? (textSize / 512) + 1 : (ftextSize / 512) + 1;
+	int HashNum = (((textSize / 512) + 1) < ((ftextSize / 512) + 1)) ? (textSize / 512) + 1 : (ftextSize / 512) + 1;
 	char md5[33];
 	char fmd5[33];
 	BYTE temp[512] = { 0, };
+	BOOL resultPrint = false;
+	unsigned int MinIntegrity = 0;
+	unsigned int MaxIntegrity = 4294967295;
 
 	for(int i=0; i< HashNum; i++){
 		if (ReadProcessMemory(hp, textAddr, &textSection, sizeof(textSection), NULL)) {
@@ -195,13 +230,21 @@ int main(int argc, char** argv) {
 			memcpy(temp, &ftextAddr[i*512], 512);
 			
 			if (calcMD5(textSection, md5) && calcMD5(temp, fmd5)) {
-				printf("%s  %s\n", md5, fmd5);           /////////////////////////////////
+				//printf("%s  %s\n", md5, fmd5);           /////////////////////////////////
 				if (strcmp(md5,fmd5)) {
-					printf("%d : Code Section is changed (0x%p)\n", pid, textAddr+(i * 512));
-					fclose(pFile);
-					free(buffer);
-					CloseHandle(hp);
-					return 0;
+
+					for (int j = 0; j < 512; j++) {
+						if ((textSection[j]!=temp[j]) && (resultPrint == false)) {
+							MinIntegrity = (i * 512) + j;
+							printf("%d :: Code Section is changed (0x%p)\n", pid, textAddr + MinIntegrity);
+							resultPrint = true;
+						}
+						else if ((textSection[j] == temp[j]) && (resultPrint == true)){
+							if (MaxIntegrity < (i * 512) + j) {
+								MaxIntegrity = (i * 512) + j;
+							}
+						}
+					}
 				}
 			}
 			else
@@ -216,6 +259,39 @@ int main(int argc, char** argv) {
 			free(buffer);
 			CloseHandle(hp);
 			return false;
+		}
+	}
+
+
+	if (resultPrint == false) {
+		printf("%d :: Code Section is OK(not changed)\n", pid);
+	}
+	else {
+		unsigned int changeSize = MaxIntegrity - MinIntegrity;
+		//printf("Before : ");
+		printf(" \t 0x");
+		for (int i = MinIntegrity; i < MinIntegrity+8; i++) {
+			printf("%02X", ftextAddr[i]);
+		}
+		//printf("\n");
+		//printf("After : ");
+		//BYTE *changedCode = (BYTE*)malloc(changeSize);
+		BYTE changedCode[8] = { 0, };
+		if (ReadProcessMemory(hp, textAddr2 + MinIntegrity, &changedCode, sizeof(changedCode), NULL)) {
+			printf("...  ->  0x");
+			for (int i = 0; i < sizeof(changedCode); i++) {
+				printf("%02X", changedCode[i]);
+			}
+			printf("...\n\n");
+			free(changedCode);
+		}
+		else {
+			printf("FAILED ReadProcessMemory : changedCode\n");
+			fclose(pFile);
+			free(changedCode);
+			free(buffer);
+			CloseHandle(hp);
+			return 0;
 		}
 	}
 
@@ -249,7 +325,7 @@ BOOL calcMD5(byte* data, LPSTR md5)
 		return FALSE;
 	}
 
-	if (!CryptHashData(hHash, data, BYTES_TO_HASH, 0))
+	if (!CryptHashData(hHash, data, 512, 0))
 	{
 		CryptReleaseContext(hProv, 0);
 		CryptDestroyHash(hHash);
