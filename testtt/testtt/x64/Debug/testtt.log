@@ -1,0 +1,174 @@
+﻿  test.cpp
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(380,29): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(380,19): error C2146: 구문 오류: ';'이(가) 'HCRYPTPROV' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(899,26): error C3646: 'dwVersion': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(899,26): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(901,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(901,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(901,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(902,18): error C3646: 'cbOID': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(902,18): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(908,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(908,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(908,27): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(909,26): error C3646: 'cbInnerString': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(909,26): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(910,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(910,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(910,27): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(911,26): error C3646: 'cbOuterString': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(911,26): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(916,18): error C3646: 'dwUse': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(916,18): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(918,18): error C3646: 'cBits': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(918,18): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(919,20): error C3646: 'dwFlags': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(919,20): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(920,23): error C3646: 'dwReserved': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(920,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(932,23): error C3646: 'dwBitLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(932,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(933,24): error C3646: 'dwNameLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(933,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(934,21): error C3646: 'szName': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(934,21): error C2143: 구문 오류: ','이(가) '[' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(934,25): error C2143: 구문 오류: ')'이(가) ';' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(934,25): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(940,27): error C3646: 'dwDefaultLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(940,27): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(941,23): error C3646: 'dwMinLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(941,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(942,23): error C3646: 'dwMaxLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(942,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(943,26): error C3646: 'dwProtocols': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(943,26): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(944,24): error C3646: 'dwNameLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(944,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(945,21): error C3646: 'szName': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(945,21): error C2143: 구문 오류: ','이(가) '[' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(945,25): error C2143: 구문 오류: ')'이(가) ';' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(945,25): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(946,28): error C3646: 'dwLongNameLen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(946,28): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(947,25): error C3646: 'szLongName': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(947,25): error C2143: 구문 오류: ','이(가) '[' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(947,29): error C2143: 구문 오류: ')'이(가) ';' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(947,29): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(952,22): error C3646: 'bType': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(952,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(953,25): error C3646: 'bVersion': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(953,25): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(954,25): error C3646: 'reserved': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(954,25): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(959,22): error C3646: 'magic': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(959,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(960,23): error C3646: 'bitlen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(960,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(961,23): error C3646: 'pubexp': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(961,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(966,22): error C3646: 'magic': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(966,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(967,23): error C3646: 'bitlen': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(967,23): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(971,24): error C3646: 'counter': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(971,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(972,21): error C3646: 'seed': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(972,21): error C2143: 구문 오류: ','이(가) '[' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(972,25): error C2143: 구문 오류: ')'이(가) ';' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(972,25): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(976,22): error C3646: 'magic': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(976,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(977,24): error C3646: 'bitlenP': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(977,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(978,24): error C3646: 'bitlenQ': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(978,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(979,24): error C3646: 'bitlenJ': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(979,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(984,22): error C3646: 'magic': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(984,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(985,24): error C3646: 'bitlenP': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(985,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(986,24): error C3646: 'bitlenQ': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(986,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(987,24): error C3646: 'bitlenJ': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(987,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(988,24): error C3646: 'bitlenX': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(988,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(993,26): error C3646: 'dwKeySpec': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(993,26): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(994,21): error C3646: 'Type': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(994,21): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(995,24): error C3646: 'Subtype': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(995,24): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1050,43): error C3646: 'cbData': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1050,43): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1051,41): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1051,41): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1051,48): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1070,34): error C3646: 'dwVersion': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1070,34): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1072,39): error C3646: 'pszContentEncObjId': 알 수 없는 재정의 지정자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1072,39): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1085,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1085,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1087,30): error C2065: 'phProv': 선언되지 않은 식별자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1088,17): error C2065: 'LPCSTR': 선언되지 않은 식별자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1088,27): error C2146: 구문 오류: ')'이(가) 'szContainer' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1095,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1095,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1094,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1097,30): error C2065: 'phProv': 선언되지 않은 식별자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1098,17): error C2065: 'LPCWSTR': 선언되지 않은 식별자입니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1098,28): error C2146: 구문 오류: ')'이(가) 'szContainer' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1117,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1117,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1116,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1119,25): error C2146: 구문 오류: ')'이(가) 'hProv' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1131,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1131,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1130,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1133,25): error C2146: 구문 오류: ')'이(가) 'hProv' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1141,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1141,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1140,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1143,25): error C2146: 구문 오류: ')'이(가) 'hProv' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1152,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1152,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1151,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1154,6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1159,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1159,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1158,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1162,25): error C2061: 구문 오류: 식별자 'DWORD'
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1165,6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1169,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1169,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1168,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1172,61): error C2061: 구문 오류: 식별자 'DWORD'
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1176,6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1180,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1180,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1179,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1183,25): error C2061: 구문 오류: 식별자 'DWORD'
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1186,6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1190,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1190,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1189,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1193,57): error C2061: 구문 오류: 식별자 'DWORD'
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1197,6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1201,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1201,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1200,1): error C2086: 'int BOOL': 재정의
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1084): message : 'BOOL' 선언을 참조하십시오.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1203,25): error C2146: 구문 오류: ')'이(가) 'hProv' 식별자 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1211,1): error C2143: 구문 오류: ';'이(가) '__cdecl' 앞에 없습니다.
+D:\Windows Kits\10\Include\10.0.19041.0\um\wincrypt.h(1211,1): fatal error C1003: 오류 수가 100개를 초과했습니다. 컴파일을 중지합니다.
