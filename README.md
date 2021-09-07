@@ -21,4 +21,4 @@ Comparison of code sections in process file(pid) and dlls
    
    (dll파일 : pid_exe파일명_dll명.txt)
    
--> 단시간내에 기능구현이 목표였기에, 코드 = 개판!
+-> 단시간내에 기능구현이 목표였기에,,,,
